@@ -1,0 +1,1054 @@
+@import url("https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap");
+
+/* === GLOBAL STYLES === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --base-100: #181717;
+  --base-200: #292725;
+  --base-300: #f5f5f5;
+}
+html,
+body {
+  /* height: 100vw; */
+  width: 100%;
+  font-family: "Host Grotesk", sans-serif;
+  background-color: var(--base-100);
+  color: var(--base-300);
+  /* FIXED: This is the failsafe to prevent any horizontal scrollbar 
+  */
+  /* overflow-x: hidden; */
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.container {
+  position: relative;
+  width: 100%;
+}
+
+/* === PRELOADER STYLES === */
+.preloader-progress,
+.preloader-mask,
+.preloader-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+}
+.preloader-progress {
+  background-color: var(--base-200);
+  z-index: 1001; /* Highest */
+  will-change: opacity;
+}
+.preloader-progress-bar {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 42rem;
+  height: 15rem;
+  background-color: var(--base-300);
+  transform-origin: left;
+  will-change: tranform;
+  border-radius: 150px;
+}
+.preloader-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  mix-blend-mode: difference;
+  z-index: 1002;
+}
+.preloader-logo h1 {
+  position: relative;
+  color: var(--base-300);
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.preloader-content {
+  z-index: 1002; /* Above progress, matches logo */
+}
+.preloader-footer {
+  position: absolute;
+  bottom: 4rem;
+  left: 50%;
+  transform: translate(-50%);
+  width: 30%;
+  text-align: center;
+}
+.preloader-footer p {
+  color: var(--base-300);
+  opacity: 0.5;
+}
+
+/* === HERO (PAGE 1) STYLES === */
+.hero {
+  position: relative;
+  height: 100svh;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--base-100);
+}
+.hero-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 4rem;
+  overflow: hidden;
+}
+.hero-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.5);
+  will-change: transform;
+}
+.hero-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  color: var(--base-300);
+}
+.header h1 {
+  font-size: 12rem;
+  font-weight: 500;
+  letter-spacing: -0.23rem;
+  line-height: 1;
+}
+.hero-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.hero-footer h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.1;
+  width: 25%;
+}
+.hero-footer p {
+  width: 25%;
+  text-align: right;
+  opacity: 0.5;
+}
+.contact-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+.menu-btn {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.25rem 0.25rem 0.25rem 1.5rem;
+  border-radius: 4rem;
+  background-color: var(--base-300);
+  color: var(--base-100);
+  will-change: transform;
+  cursor: pointer;
+}
+.btn-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--base-100);
+  color: var(--base-300);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  border-radius: 100%;
+}
+.btn-label span {
+  font-size: 0.9rem;
+  font-weight: 450;
+  line-height: 1;
+}
+
+/* === PAGE 2 STYLES === */
+.page2 {
+  position: relative;
+  width: 100%;
+  height: 150vh;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  background-color: var(--base-100);
+}
+.page2 h4 {
+  margin-top: 5px;
+  width: 90%;
+  color: white;
+  font-size: 70px;
+  font-weight: 400;
+  line-height: 5rem;
+  letter-spacing: -2px;
+}
+.page2 .bottom {
+  position: absolute;
+  top: 22%;
+  left: 0;
+  width: 100%;
+  height: 20rem;
+  background: var(--base-100);
+  opacity: 0.93;
+}
+
+/* === PAGE 3 STYLES === */
+.page3 {
+  position: relative;
+  width: 100%;
+  min-height: 150vh;
+  padding: 3rem;
+  background-color: var(--base-100);
+  color: var(--base-300);
+}
+.page3 .top,
+.page3 .bottom {
+  width: 100%;
+}
+.page3 .top {
+  display: flex;
+  align-items: center;
+}
+.page3 .top .left,
+.page3 .top .right {
+  width: 50%;
+  display: flex;
+}
+.page3 .left .imgBox {
+  width: 18rem;
+  height: 12rem;
+  overflow: hidden;
+  border-radius: 125px;
+}
+.page3 .imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.page3 .top .right p {
+  font-size: 2.5rem;
+  color: #b1a696;
+  line-height: 2.5rem;
+}
+.page3 .bottom {
+  margin-top: 5rem;
+}
+.hideBox {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.hideBox h2 {
+  position: relative;
+  font-size: 10rem;
+  font-weight: 400;
+  line-height: 9rem;
+  letter-spacing: -2px;
+}
+.hide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--base-100);
+}
+.page3 .bottom p {
+  margin-top: 3rem;
+  width: 60%;
+  font-size: 1.8rem;
+  color: #b1a696;
+  line-height: 2rem;
+}
+
+/* === PAGE 4 (CARDS) STYLES === */
+.cards {
+  position: relative;
+  width: 100%; /* FIXED: Changed from 100vw */
+  background-color: var(--base-100);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 25svh;
+}
+.cards .card-marquee {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+.cards .marquee {
+  display: flex;
+}
+.cards .marquee h1 {
+  white-space: nowrap;
+  font-size: 10vw;
+  font-weight: 600;
+  margin-right: 30px;
+}
+.cards .card {
+  position: relative;
+  width: 100%; /* FIXED: Changed from 100vw */
+  height: 100svh;
+  padding: 1.5em;
+}
+.cards .card-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+}
+.cards .card-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 150px;
+  overflow: hidden;
+}
+.cards .card-img img {
+  transform: scale(2);
+}
+.cards .card-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 1;
+  overflow: hidden;
+}
+.cards .card-title {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+}
+.card-title h1 {
+  font-size: 5rem;
+  font-weight: 400;
+}
+.cards .card-disacription {
+  text-align: center;
+  width: 40%;
+  margin-bottom: 3em;
+  position: relative;
+  transform: translateX(40px);
+  opacity: 0;
+}
+.cards .card:nth-child(2) {
+  margin-top: 50vh;
+}
+
+/* === SHARED TEXT ANIMATION STYLES === */
+.line,
+.char {
+  position: relative;
+  padding-bottom: 0.2em;
+  margin-bottom: -0.2em;
+  will-change: transform;
+  overflow: hidden;
+  display: inline-block;
+}
+.cards .char span {
+  transform: translateX(100%);
+  display: inline-block;
+  will-change: transform;
+}
+
+/* === PAGE 5 (MAGNETIC BUTTON) STYLES === */
+.page5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: var(--base-100);
+}
+.page5-content {
+  position: relative;
+  max-width: 950px;
+}
+.page5-content h6 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+  color: #b1a696;
+}
+.page5-content h1 {
+  font-size: 4.8rem;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  color: var(--base-300);
+}
+.page5-content h1 span {
+  color: #b1a696;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  border-radius: 30px;
+}
+.map-button {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  top: 90%;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: #f7f5f2be;
+  color: var(--base-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 10px;
+  border-radius: 4rem;
+  will-change: transform;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border: none;
+}
+.ri-arrow-right-up-line {
+  padding: 2px;
+  font-size: 2rem;
+  border-radius: 4rem;
+  background-color: var(--base-200);
+  color: var(--base-300);
+}
+
+/* === PAGE 6 (MARQUEE) STYLES === */
+.page6 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem 0;
+  /* min-height: 100vh; */
+  background-color: var(--base-100);
+  overflow: hidden;
+}
+.page6 .marquee {
+  position: relative;
+  color: #f4efe7;
+  font-weight: 400;
+  font-size: 150px;
+  overflow: hidden;
+  width: 100%;
+}
+.page6 .marquee .maruee_inner {
+  display: flex;
+  width: fit-content;
+  flex: auto;
+  flex-direction: row;
+}
+.page6 .marquee_part {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0 5px;
+  white-space: nowrap;
+}
+.page6 .marquee h3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #b1a696;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* === PAGE 8 (OUTRO) STYLES === */
+section.outro {
+  position: relative;
+  height: 100vh;
+  width: 100%; /* FIXED: Was 100vw */
+  padding: 1.5em;
+  overflow: hidden;
+  background-color: #141414;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+.outro h1 {
+  font-weight: 900;
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+/* === PAGE 7 (HORIZONTAL SCROLL) STYLES === */
+section.sticky {
+  position: relative;
+  height: 100vh;
+  width: 100%; /* FIXED: Was 100vw */
+  padding: 1.5em;
+  overflow: hidden;
+  background-color: var(--base-100);
+}
+.slider {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.slides {
+  position: relative;
+  height: 100%;
+  width: 300%; /* 100% * 3 slides */
+  display: flex;
+  will-change: transform;
+  transform: translateX(0);
+}
+.slide {
+  position: relative;
+  flex: 1;
+  height: 100%;
+}
+.img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 40px;
+}
+.title {
+  position: absolute;
+  width: max-content;
+  height: 200px;
+  margin: 1.5em;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  z-index: 2;
+}
+.title h1 {
+  position: relative;
+  color: #fff;
+  font-weight: 400;
+  font-size: 4rem;
+  letter-spacing: -2px;
+  line-height: 0.9;
+  will-change: transform;
+  margin-left: 30px;
+  transform: translateY(-200px);
+}
+
+/* === NEW: ACTIVITIES INTRO (AFTER HORIZONTAL SCROLL) === */
+.activities-intro {
+  position: relative;
+  width: 100%;
+  padding: 10rem 3rem 3rem 3rem; /* Added spacing */
+  background-color: var(--base-100);
+  color: var(--base-300);
+}
+/* Copied from .page3 .bottom */
+.activities-intro .bottom {
+  margin-top: 5rem;
+}
+.activities-intro .bottom p {
+  margin-top: 3rem;
+  width: 60%;
+  font-size: 1.8rem;
+  color: #b1a696;
+  line-height: 2rem;
+}
+
+/* === NEW: FINAL CARD (AFTER ACTIVITIES) === */
+.final-card {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  padding: 1.5em;
+  margin-top: 10rem; /* Added spacing */
+}
+/* Copied from .cards .card-wrapper */
+.final-card .card-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/* Copied from .cards .card-img */
+.final-card .card-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px; /* Gave it a simple radius */
+  overflow: hidden;
+}
+/* Copied from .cards .card-img img */
+.final-card .card-img img {
+  transform: scale(1.1); /* Simple scale */
+}
+/* Copied from .cards .card-content */
+.final-card .card-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 1;
+  overflow: hidden;
+}
+/* Copied from .cards .card-title */
+.final-card .card-title {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+}
+/* Copied from .cards .card-disacription */
+.final-card .card-disacription {
+  text-align: center;
+  width: 40%;
+  margin-bottom: 3em;
+  position: relative;
+  /* No animation, so keep it visible */
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* === NEW: FOOTER MARQUEE (AT END) === */
+.footer-marquee {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 0 4rem 0; /* Added spacing */
+  background-color: var(--base-100);
+  overflow: hidden;
+}
+.footer-marquee .marquee {
+  position: relative;
+  color: #f4efe7;
+  font-weight: 400;
+  font-size: 150px;
+  overflow: hidden;
+  width: 100%;
+}
+.footer-marquee .marquee .maruee_inner {
+  display: flex;
+  width: fit-content;
+  flex: auto;
+  flex-direction: row;
+}
+.footer-marquee .marquee_part {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0 5px;
+  white-space: nowrap;
+}
+.footer-marquee .marquee h3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #b1a696;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* === NEW: SITE FOOTER STYLES (FLEXBOX VERSION) === */
+.site-footer {
+  position: relative;
+  width: 100%;
+  padding: 0rem 3rem 3rem 3rem;
+  background-color: var(--base-100);
+  color: var(--base-300);
+  margin-top: 1rem;
+}
+
+.footer-grid {
+  /* We'll keep the class name, but change the rules */
+  display: flex; /* CHANGED from 'grid' */
+  align-items: flex-end; /* CHANGED from 'end' */
+  gap: 2rem;
+}
+
+.footer-left {
+  flex: 1; /* NEW: Makes this column take 1 part of the space */
+}
+
+.footer-text p {
+  font-size: 1.1rem;
+  color: #aaa;
+  line-height: 1.5;
+  max-width: 350px;
+  margin-bottom: 1.5rem;
+}
+
+.footer-text p a {
+  color: var(--base-300);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 2.5rem;
+}
+
+.footer-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid #555;
+  border-radius: 50%;
+  color: var(--base-300);
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  background-color: var(--base-200);
+  border-color: var(--base-300);
+}
+
+.footer-menu {
+  flex: 1; /* NEW: Makes this column take 1 part of the space */
+  display: flex;
+  justify-content: center;
+}
+
+.footer-right {
+  flex: 1; /* NEW: Makes this column take 1 part of the space */
+  text-align: right;
+}
+
+.footer-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-nav li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-nav a {
+  color: var(--base-300);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #aaa;
+}
+
+.footer-tagline {
+  color: #aaa;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+.line-width {
+  /* border: 1px solid var(--base-300); */
+  margin-top: 1rem;
+  height: 1px;
+  text-decoration: underline;
+  background-color: var(--base-300);
+  width: 100%;
+}
+.line-footer {
+  font-size: 17rem;
+  font-weight: 400;
+  /* padding: 1rem; */
+  text-align: center;
+  overflow: hidden;
+  line-height: 0.85; /* This pulls the top/bottom edges in tight */
+  padding-bottom: 0;
+  white-space: nowrap;
+}
+
+/* === LENIS STYLES (Required for smooth scroll) === */
+.lenis .lenis-smooth[data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis .lenis-stopped {
+  overflow: clip;
+}
+.lenis .lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* === RESPONSIVE STYLES === */
+@media (max-width: 800px) {
+  /* Hero */
+  .hero-inner {
+    border-radius: 3rem;
+  }
+  .header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    font-size: 4rem;
+    letter-spacing: 0;
+  }
+  .hero-footer {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+  .hero-footer h3,
+  .hero-footer p {
+    width: 100%;
+    text-align: left;
+  }
+  .hero-footer h3 {
+    font-size: 1.25rem;
+  }
+  .menu-btn {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    transform: translateX(0%);
+  }
+
+  /* Preloader */
+  .preloader-progress-bar {
+    left: 0%;
+    width: 100%;
+    transform: translateX(0%) scaleX(0);
+  }
+  .preloader-logo h1 {
+    font-size: 2rem;
+  }
+
+  .preloader-footer {
+    width: 75%;
+  }
+
+  /* Other Pages */
+  .page2 h4 {
+    font-size: 40px;
+    line-height: 2.8rem;
+  }
+  .page3 .top {
+    flex-direction: column;
+  }
+  .page3 .top .left,
+  .page3 .top .right {
+    width: 100%;
+  }
+  .page3 .top .right p {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    margin-top: 1.5rem;
+  }
+  .hideBox h2 {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+  .page3 .bottom p,
+  .activities-intro .bottom p {
+    /* Grouped new section */
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    width: 100%;
+  }
+  .cards .card-disacription,
+  .final-card .card-disacription {
+    /* Grouped new section */
+    width: 80%;
+  }
+
+  .page5-content h1 {
+    font-size: 2.5rem;
+  }
+  .page6 .marquee,
+  .footer-marquee .marquee {
+    /* Grouped new section */
+    font-size: 80px;
+  }
+  .card-title h1 {
+    font-size: 2rem;
+  }
+
+  /* Horizontal Scroll */
+  .title {
+    margin: 1em;
+  }
+  .title h1 {
+    font-size: 45px;
+  }
+  .outro h1 {
+    font-size: 32px;
+  }
+
+  /* Footer (Flexbox Version) */
+  .footer-grid {
+    flex-direction: column; /* Stacks items vertically */
+    align-items: flex-start; /* Aligns all items to the left */
+    gap: 3.5rem;
+  }
+  .footer-left,
+  .footer-menu,
+  .footer-right {
+    flex: none; /* Resets the flex: 1 from desktop */
+    width: 100%; /* Ensures they take full width */
+    text-align: left;
+  }
+  .footer-menu {
+    justify-content: flex-start; /* Aligns button to the left */
+  }
+  .footer-right {
+    text-align: left;
+  }
+  .line-footer {
+    font-size: 6.1rem;
+    font-weight: 400;
+    line-height: 0.85; /* Add the same fix for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .title h1 {
+    font-size: 36px;
+  }
+
+  /* --- NEW RESPONSIVE RULES --- */
+
+  /* Hero */
+  .header h1 {
+    font-size: 3.2rem; /* Was 4rem */
+  }
+
+  /* Page 2 */
+  .page2 h4 {
+    font-size: 32px; /* Was 40px */
+    line-height: 2.2rem;
+  }
+  .cards .card-img {
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Page 3 & Activities Intro Headings */
+  .hideBox h2 {
+    font-size: 3.5rem; /* Was 5rem */
+    line-height: 3.2rem; /* Keep line-height smaller than font-size */
+  }
+
+  /* Page 5 */
+  .page5-content h1 {
+    font-size: 2rem; /* Was 2.5rem */
+  }
+
+  /* Footer */
+  .line-footer {
+    font-size: 4rem; /* Was 6.1rem */
+    line-height: 0.9; 
+  }
+
+}
+/* === FOR VERY SMALL SCREENS (BELOW 380px) === */
+@media (max-width: 380px) {
+
+  /* --- 1. General Padding --- */
+  /* Sections ka side padding kam kar rahe hain */
+  .page2,
+  .page3,
+  .activities-intro,
+  .site-footer {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  /* --- 2. Hero Section --- */
+  .header h1 {
+    font-size: 2.8rem; /* 3.2rem se chota */
+  }
+  .hero-footer h3 {
+    font-size: 1.1rem; /* 1.25rem se chota */
+  }
+
+  /* --- 3. Page 2 Text --- */
+  .page2 h4 {
+    font-size: 28px; /* 32px se chota */
+    line-height: 2rem; /* Line spacing bhi adjust ki */
+  }
+
+  /* --- 4. Page 3 & Activities Titles --- */
+  /* Yeh 'Choose the one' waale titles hain */
+  .hideBox h2 {
+    font-size: 3rem; /* 3.5rem se chota */
+    line-height: 2.8rem;
+  }
+  
+  /* Page 3 ke chote image boxes */
+  .page3 .left .imgBox {
+    width: 100%; /* Ab yeh full width lenge aur ek ke neeche ek stack honge */
+    height: 15rem; /* Height ko thoda control kiya */
+  }
+
+  /* --- 5. Card Titles --- */
+  .card-title h1 {
+    font-size: 1.8rem; /* 2rem se chota */
+  }
+
+  /* --- 6. Page 5 Title --- */
+  .page5-content h1 {
+    font-size: 1.75rem; /* 2rem se chota */
+  }
+
+  /* --- 7. Footer Title --- */
+  .line-footer {
+    font-size: 3.2rem; /* 4rem se chota */
+  }
+
+  /* --- 8. Footer Links --- */
+  .footer-nav a {
+    font-size: 1.2rem; /* 1.5rem se chota */
+  }
+
+}
