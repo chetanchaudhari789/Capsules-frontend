@@ -8,7 +8,7 @@ This is a high-fidelity remake of the **Capsules® website**, built from scratch
 
 ## 📸 Screenshots
 
-[![image.png](https://www.loom.com/i/d0b6f55e30d24fcb9f0a30cee8df3bdb)](https://www.loom.com/i/6a46a80f4e1e418abc3bc76ef83fa34e)
+(https://www.loom.com/i/d0b6f55e30d24fcb9f0a30cee8df3bdb)](https://www.loom.com/i/6a46a80f4e1e418abc3bc76ef83fa34e)
 [![image.png](https://www.loom.com/i/d959a330e40d470da703c114af4e1799)](https://www.loom.com/i/fb8e4503783b486eb0e58eec88869db6)
 [![image.png](https://www.loom.com/i/891162d9f4a14964a397f1fc5d0cee66)](https://www.loom.com/i/c59dd0a0198a43d4a65ad2c864fedf62)
 [![image.png](https://www.loom.com/i/8f4fecc63f76411e9adf6eb00b191890)](https://www.loom.com/i/8aa90c221a914f6482fbef9f781d1dc1)
